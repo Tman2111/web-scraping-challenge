@@ -18,6 +18,9 @@ def scrape():
     url = "https://redplanetscience.com/"
     browser.visit(url)
 
+    html = browser.html
+    soup = bs(html, "html.parser")
+
     news_title = soup.find("div", class_="content_title").text
     paragraph = soup.find("div", class_="article_teaser_body").text
 

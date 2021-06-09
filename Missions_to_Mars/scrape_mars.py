@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def init_browser():
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
-
+    return browser
 def scrape():
     browser = init_browser()
 
